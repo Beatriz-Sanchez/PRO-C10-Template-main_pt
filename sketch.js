@@ -3,8 +3,14 @@ var seaImg,shipImg;
 
 function preload(){
   seaImg = loadImage("sea.png");
-  shipImg1 = loadAnimation("ship-1.png","ship-1.png",
-                            "ship-2.png","ship-1.png");
+  
+  //descomente a linha que fará o navio se mover
+  
+  shipImg1 = loadAnimation("ship-1.png");
+  //shipImg1 = loadAnimation("ship-1.png");
+  //shipImg1 = loadAnimation("ship-1);
+  //shipImg1 = loadAnimation("ship-1.png","ship-1.png","ship-2.png","ship-1.png");
+  //shipImg1 = loadAnimation("ship-1","ship-1","ship-2","ship-1");
 }
 
 function setup(){
@@ -29,9 +35,12 @@ function draw() {
   sea.velocityX = -3;
 
   
-  //código para redefinir o fundo
+  //descomente o código para redefinir o fundo
   if(sea.x < 0){
-    sea.x = sea.width/8;
+    //sea.x = 0;
+    //sea.x = sea.width;
+    //sea.x = sea.width/8;
+    //sea.y = sea.height;
   }
     
   drawSprites();
